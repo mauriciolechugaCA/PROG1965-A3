@@ -56,9 +56,10 @@
             // 
             // buttonStartNewNode
             // 
-            buttonStartNewNode.Location = new Point(41, 28);
+            buttonStartNewNode.Location = new Point(36, 21);
+            buttonStartNewNode.Margin = new Padding(3, 2, 3, 2);
             buttonStartNewNode.Name = "buttonStartNewNode";
-            buttonStartNewNode.Size = new Size(132, 29);
+            buttonStartNewNode.Size = new Size(116, 22);
             buttonStartNewNode.TabIndex = 0;
             buttonStartNewNode.Text = "Start new node";
             buttonStartNewNode.UseVisualStyleBackColor = true;
@@ -66,9 +67,11 @@
             // listBoxNotes
             // 
             listBoxNotes.FormattingEnabled = true;
-            listBoxNotes.Location = new Point(41, 79);
+            listBoxNotes.ItemHeight = 15;
+            listBoxNotes.Location = new Point(36, 59);
+            listBoxNotes.Margin = new Padding(3, 2, 3, 2);
             listBoxNotes.Name = "listBoxNotes";
-            listBoxNotes.Size = new Size(191, 424);
+            listBoxNotes.Size = new Size(168, 319);
             listBoxNotes.TabIndex = 1;
             // 
             // groupBoxEcounterNote
@@ -93,9 +96,11 @@
             groupBoxEcounterNote.Controls.Add(label2);
             groupBoxEcounterNote.Controls.Add(label1);
             groupBoxEcounterNote.Enabled = false;
-            groupBoxEcounterNote.Location = new Point(274, 12);
+            groupBoxEcounterNote.Location = new Point(240, 9);
+            groupBoxEcounterNote.Margin = new Padding(3, 2, 3, 2);
             groupBoxEcounterNote.Name = "groupBoxEcounterNote";
-            groupBoxEcounterNote.Size = new Size(866, 531);
+            groupBoxEcounterNote.Padding = new Padding(3, 2, 3, 2);
+            groupBoxEcounterNote.Size = new Size(758, 398);
             groupBoxEcounterNote.TabIndex = 2;
             groupBoxEcounterNote.TabStop = false;
             groupBoxEcounterNote.Text = "Add/Edit/Delet Ecounter Note:";
@@ -103,34 +108,39 @@
             // listBoxVitals
             // 
             listBoxVitals.FormattingEnabled = true;
-            listBoxVitals.Location = new Point(635, 64);
+            listBoxVitals.ItemHeight = 15;
+            listBoxVitals.Location = new Point(556, 48);
+            listBoxVitals.Margin = new Padding(3, 2, 3, 2);
             listBoxVitals.Name = "listBoxVitals";
-            listBoxVitals.Size = new Size(207, 204);
+            listBoxVitals.Size = new Size(182, 154);
             listBoxVitals.TabIndex = 19;
             // 
             // buttonDeleteNote
             // 
-            buttonDeleteNote.Location = new Point(297, 489);
+            buttonDeleteNote.Location = new Point(260, 367);
+            buttonDeleteNote.Margin = new Padding(3, 2, 3, 2);
             buttonDeleteNote.Name = "buttonDeleteNote";
-            buttonDeleteNote.Size = new Size(119, 29);
+            buttonDeleteNote.Size = new Size(104, 22);
             buttonDeleteNote.TabIndex = 18;
             buttonDeleteNote.Text = "Delete Note";
             buttonDeleteNote.UseVisualStyleBackColor = true;
             // 
             // buttonUpdateNote
             // 
-            buttonUpdateNote.Location = new Point(165, 489);
+            buttonUpdateNote.Location = new Point(144, 367);
+            buttonUpdateNote.Margin = new Padding(3, 2, 3, 2);
             buttonUpdateNote.Name = "buttonUpdateNote";
-            buttonUpdateNote.Size = new Size(119, 29);
+            buttonUpdateNote.Size = new Size(104, 22);
             buttonUpdateNote.TabIndex = 17;
             buttonUpdateNote.Text = "Update note";
             buttonUpdateNote.UseVisualStyleBackColor = true;
             // 
             // buttonAddNote
             // 
-            buttonAddNote.Location = new Point(33, 489);
+            buttonAddNote.Location = new Point(29, 367);
+            buttonAddNote.Margin = new Padding(3, 2, 3, 2);
             buttonAddNote.Name = "buttonAddNote";
-            buttonAddNote.Size = new Size(119, 29);
+            buttonAddNote.Size = new Size(104, 22);
             buttonAddNote.TabIndex = 16;
             buttonAddNote.Text = "Add note";
             buttonAddNote.UseVisualStyleBackColor = true;
@@ -138,43 +148,45 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(33, 272);
+            label7.Location = new Point(29, 204);
             label7.Name = "label7";
-            label7.Size = new Size(51, 20);
+            label7.Size = new Size(41, 15);
             label7.TabIndex = 15;
             label7.Text = "Notes:";
             // 
             // richTextBoxNotes
             // 
-            richTextBoxNotes.Location = new Point(33, 295);
+            richTextBoxNotes.Location = new Point(29, 221);
+            richTextBoxNotes.Margin = new Padding(3, 2, 3, 2);
             richTextBoxNotes.Name = "richTextBoxNotes";
-            richTextBoxNotes.Size = new Size(809, 166);
+            richTextBoxNotes.Size = new Size(708, 126);
             richTextBoxNotes.TabIndex = 14;
             richTextBoxNotes.Text = "";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(627, 35);
+            label6.Location = new Point(549, 26);
             label6.Name = "label6";
-            label6.Size = new Size(45, 20);
+            label6.Size = new Size(35, 15);
             label6.TabIndex = 13;
             label6.Text = "Vitals";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(470, 36);
+            label5.Location = new Point(411, 27);
             label5.Name = "label5";
-            label5.Size = new Size(71, 20);
+            label5.Size = new Size(57, 15);
             label5.TabIndex = 12;
             label5.Text = "Problems";
             // 
             // buttonRemoveProblem
             // 
-            buttonRemoveProblem.Location = new Point(470, 246);
+            buttonRemoveProblem.Location = new Point(411, 184);
+            buttonRemoveProblem.Margin = new Padding(3, 2, 3, 2);
             buttonRemoveProblem.Name = "buttonRemoveProblem";
-            buttonRemoveProblem.Size = new Size(134, 29);
+            buttonRemoveProblem.Size = new Size(117, 22);
             buttonRemoveProblem.TabIndex = 10;
             buttonRemoveProblem.Text = "Remove Problem";
             buttonRemoveProblem.UseVisualStyleBackColor = true;
@@ -182,106 +194,114 @@
             // listBoxProblems
             // 
             listBoxProblems.FormattingEnabled = true;
-            listBoxProblems.Location = new Point(471, 63);
+            listBoxProblems.ItemHeight = 15;
+            listBoxProblems.Location = new Point(412, 47);
+            listBoxProblems.Margin = new Padding(3, 2, 3, 2);
             listBoxProblems.Name = "listBoxProblems";
-            listBoxProblems.Size = new Size(141, 164);
+            listBoxProblems.Size = new Size(124, 124);
             listBoxProblems.TabIndex = 9;
             // 
             // buttonAddNewProblem
             // 
-            buttonAddNewProblem.Location = new Point(360, 182);
+            buttonAddNewProblem.Location = new Point(315, 136);
+            buttonAddNewProblem.Margin = new Padding(3, 2, 3, 2);
             buttonAddNewProblem.Name = "buttonAddNewProblem";
-            buttonAddNewProblem.Size = new Size(59, 29);
+            buttonAddNewProblem.Size = new Size(52, 22);
             buttonAddNewProblem.TabIndex = 8;
             buttonAddNewProblem.Text = "Add";
             buttonAddNewProblem.UseVisualStyleBackColor = true;
             // 
             // textBoxNewProblem
             // 
-            textBoxNewProblem.Location = new Point(129, 182);
+            textBoxNewProblem.Location = new Point(113, 136);
+            textBoxNewProblem.Margin = new Padding(3, 2, 3, 2);
             textBoxNewProblem.Name = "textBoxNewProblem";
-            textBoxNewProblem.Size = new Size(212, 27);
+            textBoxNewProblem.Size = new Size(186, 23);
             textBoxNewProblem.TabIndex = 7;
             // 
             // dateTimePickerDateOfBirth
             // 
             dateTimePickerDateOfBirth.Format = DateTimePickerFormat.Short;
-            dateTimePickerDateOfBirth.Location = new Point(129, 135);
+            dateTimePickerDateOfBirth.Location = new Point(113, 101);
+            dateTimePickerDateOfBirth.Margin = new Padding(3, 2, 3, 2);
             dateTimePickerDateOfBirth.Name = "dateTimePickerDateOfBirth";
-            dateTimePickerDateOfBirth.Size = new Size(117, 27);
+            dateTimePickerDateOfBirth.Size = new Size(103, 23);
             dateTimePickerDateOfBirth.TabIndex = 6;
             // 
             // textBoxPatientName
             // 
-            textBoxPatientName.Location = new Point(129, 88);
+            textBoxPatientName.Location = new Point(113, 66);
+            textBoxPatientName.Margin = new Padding(3, 2, 3, 2);
             textBoxPatientName.Name = "textBoxPatientName";
-            textBoxPatientName.Size = new Size(276, 27);
+            textBoxPatientName.Size = new Size(242, 23);
             textBoxPatientName.TabIndex = 5;
             // 
             // textBoxNoteID
             // 
-            textBoxNoteID.Location = new Point(129, 41);
+            textBoxNoteID.Location = new Point(113, 31);
+            textBoxNoteID.Margin = new Padding(3, 2, 3, 2);
             textBoxNoteID.Name = "textBoxNoteID";
-            textBoxNoteID.Size = new Size(125, 27);
+            textBoxNoteID.Size = new Size(110, 23);
             textBoxNoteID.TabIndex = 4;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(16, 191);
+            label4.Location = new Point(14, 143);
             label4.Name = "label4";
-            label4.Size = new Size(103, 20);
+            label4.Size = new Size(82, 15);
             label4.TabIndex = 3;
             label4.Text = "New problem:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(22, 142);
+            label3.Location = new Point(19, 106);
             label3.Name = "label3";
-            label3.Size = new Size(97, 20);
+            label3.Size = new Size(76, 15);
             label3.TabIndex = 2;
             label3.Text = "Date of Birth:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(21, 91);
+            label2.Location = new Point(18, 68);
             label2.Name = "label2";
-            label2.Size = new Size(98, 20);
+            label2.Size = new Size(80, 15);
             label2.TabIndex = 1;
             label2.Text = "Patient name:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(55, 48);
+            label1.Location = new Point(48, 36);
             label1.Name = "label1";
-            label1.Size = new Size(64, 20);
+            label1.Size = new Size(50, 15);
             label1.TabIndex = 0;
             label1.Text = "Note ID:";
             // 
             // labelMessage
             // 
             labelMessage.AutoSize = true;
-            labelMessage.Location = new Point(41, 528);
-            labelMessage.MinimumSize = new Size(180, 50);
+            labelMessage.Location = new Point(36, 396);
+            labelMessage.MinimumSize = new Size(158, 38);
             labelMessage.Name = "labelMessage";
-            labelMessage.Size = new Size(180, 50);
+            labelMessage.Size = new Size(158, 38);
             labelMessage.TabIndex = 3;
             labelMessage.Text = "Message container";
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1152, 630);
+            ClientSize = new Size(1008, 472);
             Controls.Add(labelMessage);
             Controls.Add(groupBoxEcounterNote);
             Controls.Add(listBoxNotes);
             Controls.Add(buttonStartNewNode);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MainForm";
-            Text = "Assignment 3 Demo";
+            Text = "Assignment 3";
             groupBoxEcounterNote.ResumeLayout(false);
             groupBoxEcounterNote.PerformLayout();
             ResumeLayout(false);
