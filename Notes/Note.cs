@@ -43,7 +43,11 @@ namespace Assignment3_Demo
 
         public Note()
         {
-            this.noteId = GenerateUniqueNoteId();
+            this.noteId = 0;
+            this.patientName = string.Empty;
+            this.dateNote = DateTime.Today;
+            this.patientProblem = string.Empty;
+            this.patientNotes = string.Empty;
         }
 
         public Note(int noteId, string patientName, DateTime dateNote, string patientProblem, string patientNotes)

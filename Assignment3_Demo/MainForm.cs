@@ -17,7 +17,7 @@ namespace Assignment3_Demo
 {
     public partial class MainForm : Form
     {
-        private ArrayList notes = new ArrayList();
+        private List<Note> notes = new List<Note>();
         private int noteId = 0;
         public MainForm()
         {
