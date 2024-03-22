@@ -10,7 +10,7 @@ namespace Assignment3
     {
         private bool IsNoteIdUnique(string noteId)
         {
-            if (notes.Count == 0)
+            return true;
         }
     }
 }
