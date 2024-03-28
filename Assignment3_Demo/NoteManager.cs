@@ -48,9 +48,9 @@ namespace Assignment3
                     string patientName = parts[1];
                     DateTime patientDOB = DateTime.Parse(parts[2]);
                     string patientProblem = parts[3];
-                    string patientNotes = parts[4];
+                    //string patientNotes = parts[4];
 
-                    listNotes.Add(new Note(noteId, patientName, patientDOB, patientProblem, patientNotes));
+                    listNotes.Add(new Note(noteId, patientName, patientDOB, patientProblem));
                 }
             }
         }
@@ -70,9 +70,10 @@ namespace Assignment3
                     //Add the fields to the SB
                     sb.Append(x.NoteId).Append("|");
                     sb.Append(x.PatientName).Append("|");
-                    sb.Append(x.PatientDOB).Append("|");
-                    sb.Append(x.PatientProblem).Append("|");
-                    sb.Append(x.PatientNotes);
+                    sb.Append(x.PatientDOB.ToShortDateString()).Append("|");
+                    //sb.Append(x.PatientProblem).Append("|");
+                    sb.Append(string.Join(";", x.PatientProblem));
+                    //sb.Append(x.PatientNotes);
 
                     //Writing the fields to the file
                     writer.WriteLine(sb.ToString());
@@ -84,9 +85,29 @@ namespace Assignment3
         /// Update the content of a specific note.
         /// Using the specific index to manage.
         /// </summary>
-        public void UpdateNote()
+        public void UpdateNote(int noteId, string patientName, DateTime patientDOB, string patientProblems)
         {
+            //Searching the note acording to the noteId
+            Note noteToUpdate = null;
+            foreach (Note x in listNotes)
+            {
+                if (x.NoteId == noteId)
+                {
+                    noteToUpdate = x;
+                    break;
+                }
+            }
 
+            //Chenking if the note was found
+            if (noteToUpdate != null)
+            {
+                noteToUpdate.PatientName = patientName;
+                noteToUpdate.PatientDOB = patientDOB;
+                noteToUpdate.PatientProblem = patientProblems;
+
+                //Saving the note with the updated fields
+                SaveNote();
+            }
         }
 
         /// <summary>
@@ -107,9 +128,20 @@ namespace Assignment3
         /// Delete a specific note.
         /// Using the specific index
         /// </summary>
-        public void DeleteNote()
+        public void DeleteNote(int noteId)
         {
-
+            //Searching the note acording to the noteId
+            foreach (Note x in listNotes)
+            {
+                if (x.NoteId == noteId)
+                {
+                    //Deleting the selected note from the list
+                    listNotes.Remove(x);
+                    break;
+                }
+            }
+            //Rewriting the file with the updated list
+            SaveNote();
         }
 
         /// <summary>
@@ -135,6 +167,7 @@ namespace Assignment3
                 return 1;
             }
         }
+
     }
 
 }

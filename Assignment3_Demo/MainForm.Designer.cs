@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            buttonStartNewNode = new Button();
+            buttonStartNewNote = new Button();
             listBoxNotes = new ListBox();
             groupBoxEcounterNote = new GroupBox();
             listBoxVitals = new ListBox();
@@ -54,16 +54,16 @@
             groupBoxEcounterNote.SuspendLayout();
             SuspendLayout();
             // 
-            // buttonStartNewNode
+            // buttonStartNewNote
             // 
-            buttonStartNewNode.Location = new Point(36, 21);
-            buttonStartNewNode.Margin = new Padding(3, 2, 3, 2);
-            buttonStartNewNode.Name = "buttonStartNewNode";
-            buttonStartNewNode.Size = new Size(116, 22);
-            buttonStartNewNode.TabIndex = 0;
-            buttonStartNewNode.Text = "Start new node";
-            buttonStartNewNode.UseVisualStyleBackColor = true;
-            buttonStartNewNode.Click += buttonStartNewNode_Click;
+            buttonStartNewNote.Location = new Point(36, 21);
+            buttonStartNewNote.Margin = new Padding(3, 2, 3, 2);
+            buttonStartNewNote.Name = "buttonStartNewNote";
+            buttonStartNewNote.Size = new Size(116, 22);
+            buttonStartNewNote.TabIndex = 0;
+            buttonStartNewNote.Text = "Start new note";
+            buttonStartNewNote.UseVisualStyleBackColor = true;
+            buttonStartNewNote.Click += buttonStartNewNote_Click;
             // 
             // listBoxNotes
             // 
@@ -74,6 +74,7 @@
             listBoxNotes.Name = "listBoxNotes";
             listBoxNotes.Size = new Size(168, 319);
             listBoxNotes.TabIndex = 1;
+            listBoxNotes.SelectedIndexChanged += listBoxNotes_SelectedIndexChanged;
             // 
             // groupBoxEcounterNote
             // 
@@ -125,6 +126,7 @@
             buttonDeleteNote.TabIndex = 18;
             buttonDeleteNote.Text = "Delete Note";
             buttonDeleteNote.UseVisualStyleBackColor = true;
+            buttonDeleteNote.Click += buttonDeleteNote_Click;
             // 
             // buttonUpdateNote
             // 
@@ -135,6 +137,7 @@
             buttonUpdateNote.TabIndex = 17;
             buttonUpdateNote.Text = "Update note";
             buttonUpdateNote.UseVisualStyleBackColor = true;
+            buttonUpdateNote.Click += buttonUpdateNote_Click;
             // 
             // buttonAddNote
             // 
@@ -287,7 +290,7 @@
             // labelMessage
             // 
             labelMessage.AutoSize = true;
-            labelMessage.Location = new Point(36, 396);
+            labelMessage.Location = new Point(36, 412);
             labelMessage.MinimumSize = new Size(158, 38);
             labelMessage.Name = "labelMessage";
             labelMessage.Size = new Size(158, 38);
@@ -302,7 +305,7 @@
             Controls.Add(labelMessage);
             Controls.Add(groupBoxEcounterNote);
             Controls.Add(listBoxNotes);
-            Controls.Add(buttonStartNewNode);
+            Controls.Add(buttonStartNewNote);
             Margin = new Padding(3, 2, 3, 2);
             Name = "MainForm";
             Text = "Assignment 3";
@@ -314,7 +317,7 @@
 
         #endregion
 
-        private Button buttonStartNewNode;
+        private Button buttonStartNewNote;
         private ListBox listBoxNotes;
         private GroupBox groupBoxEcounterNote;
         private DateTimePicker dateTimePickerDateOfBirth;

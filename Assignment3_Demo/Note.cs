@@ -17,13 +17,13 @@ namespace Assignment3
             
         }
 
-        public Note(int noteId, string patientName, DateTime patientDOB, string patientProblem, string patientNotes)
+        public Note(int noteId, string patientName, DateTime patientDOB, string patientProblem)
         {
             NoteId = noteId;
             PatientName = patientName;
             PatientDOB = patientDOB;
             PatientProblem = patientProblem;
-            PatientNotes = patientNotes;
+            //PatientNotes = patientNotes;
         }
 
         public override string ToString()
@@ -33,7 +33,7 @@ namespace Assignment3
             sb.AppendLine($"Patient Name: {PatientName}");
             sb.AppendLine($"Date of Birth: {PatientDOB}");
             sb.AppendLine($"Problem: {PatientProblem}");
-            sb.AppendLine($"Notes: {PatientNotes}");
+            //sb.AppendLine($"Notes: {PatientNotes}");
             return sb.ToString();
         }
 
