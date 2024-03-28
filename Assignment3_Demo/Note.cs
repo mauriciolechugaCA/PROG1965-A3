@@ -1,78 +1,40 @@
 ﻿using Assignment3;
 using System.Text;
 
-namespace Assignment3_Demo
+namespace Assignment3
 {
     public class Note
     {
-        private int noteId;
-        private string patientName;
-        private DateTime dateNote;
-        private string patientProblem;
-        private string patientNotes;
 
-        public int NoteId
-        {
-            get { return noteId; }
-            set { noteId = value; }
-        }
-
-        public string PatientName
-        {
-            get { return patientName; }
-            set { patientName = value; }
-        }
-
-        public DateTime DateNote
-        {
-            get { return dateNote; }
-            set { dateNote = value; }
-        }
-
-        public string PatientProblem
-        {
-            get { return patientProblem; }
-            set { patientProblem = value; }
-        }
-
-        public string PatientNotes
-        {
-            get { return patientNotes; }
-            set { patientNotes = value; }
-        }
+        public int NoteId { get; private set; }
+        public string PatientName { get; set; }
+        public DateTime PatientDOB { get; set; }
+        public string PatientProblem { get; set; }
+        public string PatientNotes { get; set; }
 
         public Note()
         {
-            this.noteId = GenerateUniqueNoteId();
+            
         }
 
-        public Note(int noteId, string patientName, DateTime dateNote, string patientProblem, string patientNotes)
+        public Note(int noteId, string patientName, DateTime patientDOB, string patientProblem, string patientNotes)
         {
-            this.noteId = noteId;
-            this.patientName = patientName;
-            this.dateNote = dateNote;
-            this.patientProblem = patientProblem;
-            this.patientNotes = patientNotes;
+            NoteId = noteId;
+            PatientName = patientName;
+            PatientDOB = patientDOB;
+            PatientProblem = patientProblem;
+            PatientNotes = patientNotes;
         }
 
-        public string GetNoteContents()
+        public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine(this.noteId.ToString()).Append(", ");
-            sb.AppendLine(this.patientName.ToString()).Append(", ");
-            sb.AppendLine(this.dateNote.ToString()).Append(", ");
-            sb.AppendLine(this.patientProblem.ToString()).Append(", ");
-            sb.AppendLine(this.patientNotes.ToString()).Append(", ");
-            
+            sb.AppendLine($"Note ID: {NoteId}");
+            sb.AppendLine($"Patient Name: {PatientName}");
+            sb.AppendLine($"Date of Birth: {PatientDOB}");
+            sb.AppendLine($"Problem: {PatientProblem}");
+            sb.AppendLine($"Notes: {PatientNotes}");
             return sb.ToString();
-        }
-
-        public int GenerateUniqueNoteId()
-        {
-            System.Random random = new System.Random();
-
-            return random.Next(100, int.MaxValue);
         }
 
     }

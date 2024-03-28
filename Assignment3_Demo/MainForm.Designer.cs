@@ -1,4 +1,4 @@
-﻿namespace Assignment3_Demo
+﻿namespace Assignment3
 {
     partial class MainForm
     {
@@ -63,6 +63,7 @@
             buttonStartNewNode.TabIndex = 0;
             buttonStartNewNode.Text = "Start new node";
             buttonStartNewNode.UseVisualStyleBackColor = true;
+            buttonStartNewNode.Click += buttonStartNewNode_Click;
             // 
             // listBoxNotes
             // 
@@ -144,6 +145,7 @@
             buttonAddNote.TabIndex = 16;
             buttonAddNote.Text = "Add note";
             buttonAddNote.UseVisualStyleBackColor = true;
+            buttonAddNote.Click += buttonAddNote_Click;
             // 
             // label7
             // 
@@ -190,6 +192,7 @@
             buttonRemoveProblem.TabIndex = 10;
             buttonRemoveProblem.Text = "Remove Problem";
             buttonRemoveProblem.UseVisualStyleBackColor = true;
+            buttonRemoveProblem.Click += buttonRemoveProblem_Click;
             // 
             // listBoxProblems
             // 
@@ -210,6 +213,7 @@
             buttonAddNewProblem.TabIndex = 8;
             buttonAddNewProblem.Text = "Add";
             buttonAddNewProblem.UseVisualStyleBackColor = true;
+            buttonAddNewProblem.Click += buttonAddNewProblem_Click;
             // 
             // textBoxNewProblem
             // 
